@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Applied Mathematics MSc student at <a href='https://www.imperial.ac.uk/'>Imperial College London</a>.
 
 profile:
   align: right
