@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 1
+title: BB84 QKD in Qiskit
 description: with background image
-img: assets/img/12.jpg
+img: assets/img/Qiskit stock image.jpg
 importance: 1
 category: Personal
 related_publications: true
