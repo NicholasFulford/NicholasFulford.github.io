@@ -5,10 +5,10 @@ description: Implementation in Qiskit with intercept-resend eavesdropper analysi
 img: assets/img/Qiskit stock image.jpg
 importance: 1
 category: Personal
-related_publications: true
+related_publications: false
 ---
 
-This project uses the `bb84`, `channel` and `eavesdropping` modules from `/qkdcode` in my QKD-Protocols repository on my GitHub. The theoretical elements of this project were supported by my lecture notes from "Quantum Information & Computation" at Cambridge and Nielsen & Chuang's classic textbook.
+This project uses the `bb84`, `channel` and `eavesdropping` modules from `/qkdcode` in the QKD-Protocols repository on my GitHub. The theoretical elements of this project were supported by my lecture notes from "Quantum Information & Computation" at Cambridge and Nielsen & Chuang's classic textbook.
 
 {::nomarkdown}
 {% assign jupyter_path = 'assets/jupyter/blog.ipynb' | relative_url %}
