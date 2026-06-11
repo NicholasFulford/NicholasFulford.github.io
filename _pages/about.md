@@ -23,4 +23,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello! My name is Nic Fulford, an incoming Applied Mathematics MSc student at Imperial College London for 2026/27. Prior to this, I studied Mathematics at Homerton College, University of Cambridge (the photo to the right is me on graduation day!). I'm really interested in quantum information and computation and have a strong academic foundation in quantum mechanics, computational mathematics, complex methods and mathematical modelling.
+Hello! My name is Nic Fulford, an incoming Applied Mathematics MSc student at Imperial College London for 2026/27. Prior to this, I studied Mathematics at Homerton College, University of Cambridge. I'm interested in quantum information and computation and have a strong academic foundation in quantum mechanics, computational mathematics, complex methods and mathematical modelling.
