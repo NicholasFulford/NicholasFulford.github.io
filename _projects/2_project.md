@@ -5,7 +5,6 @@ description: A simple implementation in Python with Qiskit for correcting single
 img: assets/img/Qiskit stock image.jpg
 importance: 2
 category: Personal
-giscus_comments: true
 ---
 
 A simple implementation of the 9-qubit Shor Code in Python with Qiskit. This implementation is useful for illustrating the Shor Code's functionality as well as some basic princicples of quantum error correction. 
