@@ -1,7 +1,7 @@
 ---
 layout: page
 title: BB84 QKD
-description: Implementation in Python with Qiskit including intercept-resend eavesdropper analysis
+description: A modular implementation in Python with Qiskit, including intercept-resend eavesdropper analysis.
 img: assets/img/Qiskit stock image.jpg
 importance: 1
 category: Personal
