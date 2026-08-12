@@ -1,15 +1,15 @@
 ---
 layout: page
 title: Bell's Theorem - Hidden Variables vs. Inherent Indeterminism
-description: An investigation into an instance of Bell's Theorem including an experimental verification using results from real hardware through IBM's Quantum Platform.
+description: An investigation and verification of Bell's Theorem using results from real hardware through IBM's Quantum Platform.
 img: assets/img/Qiskit stock image.jpg
 importance: 3
 category: Personal
 ---
 
-In the case of an entangled electron-positron pair with anti-aligned spins, are the spins described by some hidden variables unknown to us or are the spins actually undetermined by nature itself prior to measurement? This can, in fact, be determined experimentally by considering the statistics of multiple measurements. 
+In the case of an entangled electron-positron pair with anti-aligned spins, are the spins described by some hidden variables unknown to us or are they actually undetermined by nature itself prior to measurement? This can, in fact, be determined experimentally by considering the statistics of multiple measurements. 
 
-In this project, I investigate this particular instance of Bell's Theorem and verify it using the results from a suitable experiment on real IBM hardware, access to which was made possible by their Quantum Platform. 
+In this project, I investigate this particular instance of Bell's Theorem and verify it using the results from a suitable experiment on real IBM hardware, access to which was made possible through their Quantum Platform. 
 
 ---
 

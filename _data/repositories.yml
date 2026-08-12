@@ -1,7 +1,8 @@
 github_users:
   - NicholasFulford
   
-repo_description_lines_max: 2
+repo_description_lines_max: 4
 
 github_repos:
   - NicholasFulford/QKD-Protocols
+  - NicholasFulford/QEC-Code
