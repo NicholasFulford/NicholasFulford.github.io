@@ -2,7 +2,7 @@
 layout: page
 title: 9-Qubit Shor Code
 description: A simple implementation in Python with Qiskit for correcting single qubit errors.
-img: assets/img/Qiskit stock image.jpg
+img: assets/img/9QubitShorCode.png
 importance: 1
 category: Personal
 ---

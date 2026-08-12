@@ -2,7 +2,7 @@
 layout: page
 title: Bell's Theorem - Hidden Variables vs. Inherent Indeterminism
 description: An investigation and verification of Bell's Theorem using results from real hardware through IBM's Quantum Platform.
-img: assets/img/Qiskit stock image.jpg
+img: assets/img/BellTheorem.png
 importance: 3
 category: Personal
 ---
