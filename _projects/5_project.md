@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CATAM Projects
-description: Four Cambridge CATAM projects, each pairing an analytic derivation with a numerical implementation.
+description: My final year Cambridge CATAM projects, each pairing an analytic derivation with a numerical implementation.
 img: assets/img/catam.png
 importance: 1
 category: Academic
@@ -65,12 +65,12 @@ permalink: /catam/
         </ul>
 
         <div class="catam-figrow">
-          <img src="{{ '/assets/img/catam/pde-fig-analytic.png' | relative_url }}" alt="Analytic solution evolution">
-          <img src="{{ '/assets/img/catam/pde-fig-error.png' | relative_url }}" alt="Numerical error comparison">
-          <img src="{{ '/assets/img/catam/pde-fig-asymptotic.png' | relative_url }}" alt="Convergence to asymptotic limit">
+          <img src="{{ '/assets/img/catam_PDEs_analytic.png' | relative_url }}" alt="Analytic solution evolution">
+          <img src="{{ '/assets/img/catam_PDEs_error.png' | relative_url }}" alt="Numerical error comparison">
+          <img src="{{ '/assets/img/catam_PDEs_asymptotic_.png' | relative_url }}" alt="Convergence to asymptotic limit">
         </div>
 
-        <a class="catam-btn" href="{{ '/assets/pdf/catam-1.3-parabolic-pdes.pdf' | relative_url }}" target="_blank">
+        <a class="catam-btn" href="{{ '/assets/pdf/catam_1.3_Parabolic_PDEs.pdf' | relative_url }}" target="_blank">
           Download full report (PDF)
         </a>
 
