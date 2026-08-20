@@ -65,9 +65,9 @@ permalink: /catam/
         </ul>
 
         <div class="catam-figrow">
-          <img src="{{ '/assets/img/catam_PDEs_analytic.png' | relative_url }}" alt="Analytic solution evolution">
-          <img src="{{ '/assets/img/catam_PDEs_error.png' | relative_url }}" alt="Numerical error comparison">
-          <img src="{{ '/assets/img/catam_PDEs_asymptotic_.png' | relative_url }}" alt="Convergence to asymptotic limit">
+          <img src="{{ '/assets/img/catam_PDEs_analytic.jpg' | relative_url }}" alt="Analytic solution evolution">
+          <img src="{{ '/assets/img/catam_PDEs_error.jpg' | relative_url }}" alt="Numerical error comparison">
+          <img src="{{ '/assets/img/catam_PDEs_asymptotic.jpg' | relative_url }}" alt="Convergence to asymptotic limit">
         </div>
 
         <a class="catam-btn" href="{{ '/assets/pdf/catam_1.3_Parabolic_PDEs.pdf' | relative_url }}" target="_blank">
