@@ -65,9 +65,18 @@ permalink: /catam/
         </ul>
 
         <div class="catam-figrow">
-          <img src="{{ '/assets/img/catam_PDEs_analytic.jpg' | relative_url }}" alt="Analytic solution evolution">
-          <img src="{{ '/assets/img/catam_PDEs_error.jpg' | relative_url }}" alt="Numerical error comparison">
-          <img src="{{ '/assets/img/catam_PDEs_asymptotic.jpg' | relative_url }}" alt="Convergence to asymptotic limit">
+        <figure class="catam-fig">
+            <figcaption>Plots of the analytic Fourier series solution for 𝜃(𝑥) at various times, each found by summing the first 100 terms</figcaption>
+            <img src="{{ '/assets/img/catam_PDEs_analytic.jpg' | relative_url }}" alt="Analytic solution evolution">
+        </figure>
+        <figure class="catam-fig">
+            <figcaption>Plots of log(Computational time 𝑇) against log(Numerical step length 𝑁) for each protocol evaluated at 𝑡 = 0.5, 1 & 2</figcaption>
+            <img src="{{ '/assets/img/catam_PDEs_error.jpg' | relative_url }}" alt="Numerical error comparison">
+        </figure>
+        <figure class="catam-fig">
+            <figcaption>PLots of the auxillary function 𝜙(𝑥, 𝑡) found numerically with protocol 2 and the asymptotic limit of the analytic solution for 𝜙 found in question 1</figcaption>
+            <img src="{{ '/assets/img/catam_PDEs_asymptotic.jpg' | relative_url }}" alt="Convergence to asymptotic limit">
+        </figure>
         </div>
 
         <a class="catam-btn" href="{{ '/assets/pdf/catam_1.3_Parabolic_PDEs.pdf' | relative_url }}" target="_blank">
