@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CATAM Projects
-description: My final year Cambridge CATAM projects, each pairing an analytic derivation with a numerical implementation.
+description: My final year Cambridge CATAM projects.
 img: assets/img/catam.png
 importance: 1
 category: Academic
@@ -9,10 +9,8 @@ permalink: /catam/
 ---
 
 <p>
-  CATAM (Computer-Aided Teaching of All Mathematics) is a Cambridge Mathematics course unit in which
-  each project poses an open-ended mathematical problem — typically requiring an analytic derivation
-  followed by a numerical implementation, error analysis, and discussion of results. Below are four
-  projects I completed, each summarised with the problem, my approach and key results, and a link to
+  The CATAM (Computer-Aided Teaching of All Mathematics) projects are a coursework component of of the Cambridge Mathematics tripos, centered around the use of computers to aid the investigation into a particular mathematical problem.
+  Below are four projects I completed in my third year, each summarised with the problem, key results, and a link to
   the full write-up.
 </p>
 
@@ -39,7 +37,7 @@ permalink: /catam/
         <h5>The problem</h5>
         <p>
           Solve the 1D diffusion equation on the unit interval, where the temperature at one end
-          varies smoothly in time as a pulse, <d-math>f(t) = t(1-t)</d-math>, while the other end
+          varies smoothly in time as a pulse, \(f(t) = t(1-t)\), while the other end
           is held at zero. First derive an analytic solution by substitution and a Fourier sine
           series expansion, then implement and compare three finite-difference time-marching
           schemes &mdash; explicit forward-differencing, a centred (leapfrog) scheme, and a
@@ -47,7 +45,7 @@ permalink: /catam/
           and computational cost against the analytic benchmark.
         </p>
 
-        <h5>Approach &amp; key results</h5>
+        <h5>Key results</h5>
         <ul>
           <li>Derived the closed-form Fourier sine series solution and its long-time asymptotic limit.</li>
           <li>Implemented all three finite-difference schemes in MATLAB, exploiting sparsity for the
