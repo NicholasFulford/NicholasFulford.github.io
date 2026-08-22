@@ -9,9 +9,7 @@ permalink: /catam/
 ---
 
 <p>
-  The CATAM (Computer-Aided Teaching of All Mathematics) projects are a coursework component of of the Cambridge Mathematics tripos, centered around the use of computers to aid the investigation into a particular mathematical problem.
-  Below are four projects I completed in my third year, each summarised with the problem, key results, and a link to
-  the full write-up.
+  The CATAM (Computer-Aided Teaching of All Mathematics) projects are a modular coursework component of the Cambridge Mathematics tripos, centered around the use of computers to aid an investigation into a mathematics problem, which may itself be analytically intractable. Below are the four projects I completed in my third year, each with a summary of the project, key results, and a link to the full write-up.
 </p>
 
 <div class="catam-grid">
@@ -34,28 +32,28 @@ permalink: /catam/
     <div class="catam-tile-body">
       <div class="catam-tile-body-inner">
 
-        <h5>The problem</h5>
+        <h5>The Project:</h5>
         <p>
-          Solve the 1D diffusion equation on the unit interval, where the temperature at one end
-          varies smoothly in time as a pulse, \(f(t) = t(1-t)\), while the other end
-          is held at zero. First derive an analytic solution by substitution and a Fourier sine
-          series expansion, then implement and compare three finite-difference time-marching
-          schemes &mdash; explicit forward-differencing, a centred (leapfrog) scheme, and a
-          semi-implicit &theta;-scheme &mdash; evaluating each for stability, order of accuracy,
+          We consider the 1D diffusion equation on the unit interval, where the temperature at one end
+          varies smoothly in time as \(f(t) = t(1-t)\), while the other end is held at zero. 
+          First deriving an analytic Fourier-series solution by substitution and a Fourier sine
+          series expansion, we then implement and compare three finite-difference time-marching
+          schemes: explicit forward differencing in time, a centred leapfrog scheme, and an 
+          implicit scheme. We evaluate each for stability, order of accuracy,
           and computational cost against the analytic benchmark.
         </p>
 
-        <h5>Key results</h5>
+        <h5>Key Results:</h5>
         <ul>
           <li>Derived the closed-form Fourier sine series solution and its long-time asymptotic limit.</li>
-          <li>Implemented all three finite-difference schemes in MATLAB, exploiting sparsity for the
-              implicit scheme via tridiagonal solves.</li>
-          <li>Found the centred (leapfrog) scheme to be unconditionally unstable, confirming the
+          <li>Implemented all three finite-difference schemes in MATLAB, exploiting the sparsity of the tridiagonal
+              matrix equation for the implicit scheme.</li>
+          <li>Found the centred leapfrog scheme to be unconditionally unstable, confirming the
               theoretical prediction, and excluded it from further analysis.</li>
           <li>Identified special parameter choices (e.g. &nu; = 1/6 for the explicit scheme; specific
               &nu;&ndash;&rho; pairings for the implicit scheme) at which local truncation error
               jumps from second to fourth order due to cancellation of leading error terms.</li>
-          <li>Compared total operation count vs. accuracy across three candidate protocols and
+          <li>Compared total operation count vs. accuracy for the two remaining candidate protocols and
               recommended the implicit scheme with &nu; = 1/5, &rho; = 1/12 as the most
               efficient choice for a given accuracy target.</li>
           <li>Verified numerically that the solution converges to the derived long-time asymptotic
@@ -72,7 +70,7 @@ permalink: /catam/
             <img src="{{ '/assets/img/catam_PDEs_error.jpg' | relative_url }}" alt="Numerical error comparison">
         </figure>
         <figure class="catam-fig">
-            <figcaption>PLots of the auxillary function 𝜙(𝑥, 𝑡) found numerically with protocol 2 and the asymptotic limit of the analytic solution for 𝜙 found in question 1</figcaption>
+            <figcaption>Plots of the reduced temperature function 𝜙(𝑥, 𝑡) found numerically with protocol 2 and the asymptotic limit of the analytic solution for 𝜙 found in question 1</figcaption>
             <img src="{{ '/assets/img/catam_PDEs_asymptotic.jpg' | relative_url }}" alt="Convergence to asymptotic limit">
         </figure>
         </div>
@@ -91,22 +89,50 @@ permalink: /catam/
   <div class="catam-tile">
     <button class="catam-tile-header" type="button" aria-expanded="false">
       <div class="catam-tile-header-text">
-        <span class="catam-badge">Category</span>
-        <h4>Project 2 Title</h4>
-        <p class="catam-subtitle">One-line description.</p>
+        <span class="catam-badge">Numerical Analysis</span>
+        <h4>Padé Approximants</h4>
+        <p class="catam-subtitle">
+        Rational function approximants vs. truncated power series for estimating functions from their Taylor coefficients.</p>
       </div>
       <span class="catam-chevron" aria-hidden="true">&#9662;</span>
     </button>
+
     <div class="catam-tile-body">
       <div class="catam-tile-body-inner">
-        <h5>The problem</h5>
-        <p>Paraphrased problem statement here.</p>
-        <h5>Approach &amp; key results</h5>
+
+        <h5>The Project:</h5>
+        <p>
+          Given a power series \(f(x) = \sum c_k x^k\), we construct the \([L,M]\) Padé approximant \(R_{L,M}(x)\) (a rational function whose own power series matches \(f(x)\)'s to the highest possible order) by solving two linear systems for its numerator and denominator coefficients. Applying this to \(f_1(x) = (1+x)^{1/2}\) and \(f_2(x) = \int_0^\infty e^{-t}(1+xt)^{-1}dt\), we compare convergence, accuracy, and range of validity against the truncated power series. Finally, we investigate the pole/zero structure of the Padé approximants for six test functions to relate anomalous poles/zeros to branch cuts and singularities of the approximated function.
+        </p>
+        <h5>Key Results:</h5>
         <ul>
-          <li>Key result 1.</li>
-          <li>Key result 2.</li>
+          <li>Wrote two general-purpose MATLAB routines to (A) - solve the Padé linear systems with optional iterative
+              improvement for numerical accuracy, and to (B) - extract polynomial roots given the coefficients.</li>
+          <li>Derived the power series for \((1+x)^{1/2}\) and showed the partial sum error in estimating \(\sqrt{2}\)
+              decays as a power law \(|\epsilon_N| \approx 0.132N^{-1.490}\).</li>
+          <li>Showed that the diagonal Padé approximant \(R_{L,L}(1)\) converges to \(\sqrt{2}\) *exponentially* in \(L\),
+              reaching the double-precision floor (\(\sim10^{-16}\)) by \(L=10\), vastly outperforming the power series  which would need \(\sim3\times10^9\) terms for comparable accuracy.</li>
+          <li>Demonstrated that the approximant remains valid for \(1 < x \le 100\) whereas the power series diverges, and 
+              quantified how the exponential convergence rate in \(L\) degrades with \(x\).</li>
+          <li>Mapped the poles and zeros of the Padé approximants of six functions, showing that for functions with branch
+              points these cluster along the branch cut. Additionally indentified transient "defect" pairs of close proximity poles and zeros for each approximant, which did not correspond to features of the approximated function.</li>
         </ul>
-        <a class="catam-btn" href="{{ '/assets/pdf/catam-2.pdf' | relative_url }}" target="_blank">
+
+        <div class="catam-figrow">
+        <figure class="catam-fig">
+            <figcaption>Plots of the analytic Fourier series solution for 𝜃(𝑥) at various times, each found by summing the first 100 terms</figcaption>
+            <img src="{{ '/assets/img/catam_PDEs_analytic.jpg' | relative_url }}" alt="Analytic solution evolution">
+        </figure>
+        <figure class="catam-fig">
+            <figcaption>Plots of log(Computational time 𝑇) against log(Numerical step length 𝑁) for each protocol evaluated at 𝑡 = 0.5, 1 & 2</figcaption>
+            <img src="{{ '/assets/img/catam_PDEs_error.jpg' | relative_url }}" alt="Numerical error comparison">
+        </figure>
+        <figure class="catam-fig">
+            <figcaption>Plots of the reduced temperature function 𝜙(𝑥, 𝑡) found numerically with protocol 2 and the asymptotic limit of the analytic solution for 𝜙 found in question 1</figcaption>
+            <img src="{{ '/assets/img/catam_PDEs_asymptotic.jpg' | relative_url }}" alt="Convergence to asymptotic limit">
+        </figure>
+        </div>
+        <a class="catam-btn" href="{{ '/assets/pdf/catam_7.5_PadeApproximants.pdf' | relative_url }}" target="_blank">
           Download full report (PDF)
         </a>
       </div>
@@ -260,6 +286,26 @@ permalink: /catam/
     border-radius: 0.375rem;
   }
 
+  .catam-fig {
+    flex: 0 1 220px;
+    max-width: 220px;
+    margin: 0;
+  }
+
+  .catam-fig figcaption {
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.75;
+    margin-bottom: 0.35rem;
+  }
+
+  .catam-fig img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    border-radius: 0.375rem;
+  }
+  
   .catam-btn {
     display: inline-block;
     padding: 0.4rem 0.9rem;
