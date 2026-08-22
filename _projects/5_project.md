@@ -102,20 +102,20 @@ permalink: /catam/
 
         <h5>The Project:</h5>
         <p>
-          Given a power series \(f(x) = \sum c_k x^k\), we construct the \([L,M]\) Padé approximant \(R_{L,M}(x)\) (a rational function whose own power series matches \(f(x)\)'s to the highest possible order) by solving two linear systems for its numerator and denominator coefficients. Applying this to \(f_1(x) = (1+x)^{1/2}\) and \(f_2(x) = \int_0^\infty e^{-t}(1+xt)^{-1}dt\), we compare convergence, accuracy, and range of validity against the truncated power series. Finally, we investigate the pole/zero structure of the Padé approximants for six test functions to relate anomalous poles/zeros to branch cuts and singularities of the approximated function.
+          A Padé approximant of a function \(f(x)\) is a rational function whose own power series matches \(f(x)\)'s to the highest possible order. Given a power series \(f(x) = \sum c_k x^k\), we construct the \([L,M]\) Padé approximant \(R_{L,M}(x)\) by solving two linear systems, one for its numerator and denominator coefficients respecively. Applying this to \(f_1(x) = (1+x)^{1/2}\) and \(f_2(x) = \int_0^\infty e^{-t}(1+xt)^{-1}dt\), we compare convergence, accuracy, and range of validity against the truncated power series. Finally, we investigate the pole/zero structure of the Padé approximants for six test functions and relate the poles/zeros to branch cuts and singularities of the approximated function.
         </p>
         <h5>Key Results:</h5>
         <ul>
           <li>Wrote two general-purpose MATLAB routines to (A) - solve the Padé linear systems with optional iterative
               improvement for numerical accuracy, and to (B) - extract polynomial roots given the coefficients.</li>
           <li>Derived the power series for \((1+x)^{1/2}\) and showed the partial sum error in estimating \(\sqrt{2}\)
-              decays as a power law \(|\epsilon_N| \approx 0.132N^{-1.490}\).</li>
-          <li>Showed that the diagonal Padé approximant \(R_{L,L}(1)\) converges to \(\sqrt{2}\) *exponentially* in \(L\),
+              decays as a power law.</li>
+          <li>Showed that the diagonal Padé approximant \(R_{L,L}(1)\) converges to \(\sqrt{2}\) exponentially in \(L\),
               reaching the double-precision floor (\(\sim10^{-16}\)) by \(L=10\), vastly outperforming the power series  which would need \(\sim3\times10^9\) terms for comparable accuracy.</li>
           <li>Demonstrated that the approximant remains valid for \(1 < x \le 100\) whereas the power series diverges, and 
               quantified how the exponential convergence rate in \(L\) degrades with \(x\).</li>
           <li>Mapped the poles and zeros of the Padé approximants of six functions, showing that for functions with branch
-              points these cluster along the branch cut. Additionally indentified transient "defect" pairs of close proximity poles and zeros for each approximant, which did not correspond to features of the approximated function.</li>
+              points these cluster along the branch cut. Additionally indentified transient "defect" pairs of close proximity poles and zeros for certain approximants, which did not correspond to features of the approximated function.</li>
         </ul>
 
         <div class="catam-figrow">
@@ -287,8 +287,8 @@ permalink: /catam/
   }
 
   .catam-fig {
-    flex: 0 1 220px;
-    max-width: 220px;
+    flex: 0 1 400px;
+    max-width: 4000px;
     margin: 0;
   }
 
@@ -302,10 +302,10 @@ permalink: /catam/
   .catam-fig img {
     display: block;
     width: 100%;
-    max-width: 220px;
+    max-width: 400px;
     border-radius: 0.375rem;
   }
-  
+
   .catam-btn {
     display: inline-block;
     padding: 0.4rem 0.9rem;
