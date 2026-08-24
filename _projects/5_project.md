@@ -107,6 +107,8 @@ permalink: /catam/
               reaching the computer double-precision floor (\(\sim10^{-16}\)) by \(L=10\), vastly outperforming the power series  which would need \(\sim3\times10^9\) terms for comparable accuracy.</li>
           <li>Demonstrated that the approximant remains valid for \(1 < x \le 100\) whereas the power series diverges, and 
               quantified how the exponential convergence rate in \(L\) degrades with \(x\).</li>
+          <li>Established analagous results for the Padé approximant of \(f_2(x)\), demonstrating both greater 
+              accuracy and domain of convergence for the approximant over the power series.</li>
           <li>Mapped the poles and zeros of the Padé approximants of six functions, showing that for functions with branch
               points these cluster along the branch cut. Additionally indentified transient "defect" pairs of close proximity poles and zeros for certain approximants, which did not correspond to features of the approximated function.</li>
         </ul>
@@ -143,7 +145,7 @@ permalink: /catam/
     <div class="catam-tile-body">
       <div class="catam-tile-body-inner">
         <h5>The Project:</h5>
-        <p>We first consider the Klein–Gordon equation \(u_{tt} - c_0^2 u_{xx} = -q^2 u\). Solving by Fourier transform to obtain the dispersion relation \(\Omega(k) = \sqrt{q^2+k^2}\), we then apply the method of stationary phase to derive a large-\(t\) asymptotic approximation revealing the physical meaning of group velocity. We then build and validate a finite-difference scheme to solve the initial-value problem numerically, and extend it to a "signalling problem" where a boundary is driven at a fixed frequency, examining how the resulting wave packet's shape depends on that frequency relative to \(q\).</p>
+        <p>We consider the Klein–Gordon equation \(u_{tt} - c_0^2 u_{xx} = -q^2 u\). First solving by Fourier transform to obtain the dispersion relation \(\Omega(k) = \sqrt{q^2+k^2}\), we then apply the method of stationary phase to derive a large-\(t\) asymptotic approximation, revealing the physical meaning of group velocity in this instance. We then build and validate a finite-difference scheme to solve the initial-value problem numerically, and extend it to a "signalling problem" where a boundary is driven at a fixed frequency, examining how the resulting wave packet's shape depends on that frequency relative to \(q\).</p>
         <h5>Key Results:</h5>
         <ul>
           <li>Derived the analytic integral solution via Fourier transform and showed that phase velocity \(\Omega(k)/k\) 
@@ -160,13 +162,15 @@ permalink: /catam/
         <h5>Selected Figures:</h5>
         <div class="catam-figrow">
         <figure class="catam-fig">
-            <figcaption>Numerical solution with Δ𝑥 = Δ𝑡 = 0.005 and stationary-phase approximation overlaid for various \|(t\) (𝑞 = 1).</figcaption>
+            <figcaption>Numerical solution with Δ𝑥 = Δ𝑡 = 0.005 and stationary-phase approximation overlaid for various
+            \(t\) (𝑞 = 1).</figcaption>
             <img src="{{ '/assets/img/catam_PhaseGroup_asymptotic.jpg' | relative_url }}" alt="Analytic solution evolution">
         </figure>
         <figure class="catam-fig">
             <figcaption>Numerical solution for 𝑞 = 1 & \(𝜔_0 = 1.1\) with Δ𝑥 = Δ𝑡 = 0.005. Arrow indicates movement of individual wavefront forwards through wavepacket.</figcaption>
             <img src="{{ '/assets/img/catam_PhaseGroup_dispersion.jpg' | relative_url }}" alt="Numerical error comparison">
         </figure>
+        </div>
         <a class="catam-btn" href="{{ '/assets/pdf/catam_2.10_PhaseGroupVelocity.pdf' | relative_url }}" target="_blank">
           Download full report (PDF)
         </a>
@@ -189,11 +193,14 @@ permalink: /catam/
     <div class="catam-tile-body">
       <div class="catam-tile-body-inner">
         <h5>The Project:</h5>
-        <p>Verify analytically that the \(\text{sech}^2\)-profile travelling wave solves the Korteweg–de Vries equation \(u_t + uu_x + \delta^2 u_{xxx} = 0\), and prove mass and energy are conserved under periodic boundary conditions. Implement the Zabusky–Kruskal leap-frog finite-difference scheme (deriving its stability condition and devising a special first-step method), then use it to study two-soliton interactions and the evolution of a smooth sinusoidal initial condition into a soliton train, driven by the competition between nonlinear steepening and dispersion.</p>
+        <p>We consider the Korteweg–de Vries equation \(u_t + uu_x + \delta^2 u_{xxx} = 0\). First verifying analytically that the single-soliton \(\text{sech}^2\) profile travelling wave solves this, we prove mass and energy are conserved under periodic boundary conditions. We then implement the Zabusky–Kruskal leap-frog finite-difference scheme (deriving its stability condition and devising a special first-step method), then use it to study two-soliton interactions and the evolution of a smooth sinusoidal initial condition into a soliton train, driven by the competition between nonlinear steepening and dispersion.</p>
         <h5>Key Results:</h5>
         <ul>
-          <li>Key result 1.</li>
-          <li>Key result 2.</li>
+          <li>Verified the single-soliton solution by direct substitution and proved mass/energy conservation analytically using the periodic boundary conditions.</li>
+          <li>Derived the scheme's stability condition for general \(\delta\) by rescaling, and devised an alternative one-sided update for the first time step to work around the leap-frog scheme's two-level dependency.</li>
+          <li>Validated the numerical soliton against the exact solution, confirming second-order convergence in \(h\) and \(k\) and identifying that the numerical propagation speed is marginally slower than the analytic prediction.<li>
+          <li>Simulated a two-soliton collision, showing the larger/faster soliton overtakes the smaller one and that the interaction is genuinely nonlinear (not a simple superposition of independently-evolved solitons).</li>
+          <li>Tracked the breakup of a sine wave into a soliton train under KdV dynamics, estimating the onset time of dispersive effects via a scaling argument (\(T \approx 1/2\pi \approx 0.16\)) and showing smaller \(\delta\) produces more, narrower solitons emerging in order of increasing amplitude and speed.</li>
         </ul>
         <a class="catam-btn" href="{{ '/assets/pdf/catam-4.pdf' | relative_url }}" target="_blank">
           Download full report (PDF)
@@ -283,6 +290,7 @@ permalink: /catam/
   .catam-figrow {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
     margin: 1rem 0;
   }
@@ -300,7 +308,7 @@ permalink: /catam/
   }
 
   .catam-fig figcaption {
-    font-size: 0.8rem;
+    font-size: 1.0rem;
     font-weight: 400;
     opacity: 0.75;
     margin-bottom: 0.35rem;
