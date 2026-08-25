@@ -214,7 +214,7 @@ permalink: /catam/
             <img src="{{ '/assets/img/catam_Solitons_emergence.jpg' | relative_url }}" alt="Numerical error comparison">
         </figure>
         </div>
-        <a class="catam-btn" href="{{ '/assets/pdf/catam-4.pdf' | relative_url }}" target="_blank">
+        <a class="catam-btn" href="{{ '/assets/pdf/catam_2.7_SolitonSolutions.pdf' | relative_url }}" target="_blank">
           Download full report (PDF)
         </a>
       </div>
@@ -330,7 +330,7 @@ permalink: /catam/
   .catam-fig img {
     display: block;
     width: 450px;
-    max-width: 450px;
+    max-width: 100%;
     margin: 0 auto;
     border-radius: 0.375rem;
   }
