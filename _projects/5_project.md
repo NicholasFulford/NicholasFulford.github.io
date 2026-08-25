@@ -193,15 +193,27 @@ permalink: /catam/
     <div class="catam-tile-body">
       <div class="catam-tile-body-inner">
         <h5>The Project:</h5>
-        <p>We consider the Korteweg–de Vries equation \(u_t + uu_x + \delta^2 u_{xxx} = 0\). First verifying analytically that the single-soliton \(\text{sech}^2\) profile travelling wave solves this, we prove mass and energy are conserved under periodic boundary conditions. We then implement the Zabusky–Kruskal leap-frog finite-difference scheme (deriving its stability condition and devising a special first-step method), then use it to study two-soliton interactions and the evolution of a smooth sinusoidal initial condition into a soliton train, driven by the competition between nonlinear steepening and dispersion.</p>
+        <p>We consider the Korteweg–de Vries equation \(u_t + uu_x + \delta^2 u_{xxx} = 0\). First verifying that the single-soliton \(\text{sech}^2\) travelling wave solves this, we prove mass and energy are conserved under periodic boundary conditions. We then implement the Zabusky–Kruskal leap-frog finite-difference scheme, deriving its stability condition and devising a special first-step method. We use it to study two-soliton interactions and the evolution of a smooth sinusoidal initial condition into a soliton train, driven by the competition between nonlinear steepening and dispersion.</p>
         <h5>Key Results:</h5>
         <ul>
           <li>Verified the single-soliton solution by direct substitution and proved mass/energy conservation analytically using the periodic boundary conditions.</li>
           <li>Derived the scheme's stability condition for general \(\delta\) by rescaling, and devised an alternative one-sided update for the first time step to work around the leap-frog scheme's two-level dependency.</li>
-          <li>Validated the numerical soliton against the exact solution, confirming second-order convergence in \(h\) and \(k\) and identifying that the numerical propagation speed is marginally slower than the analytic prediction.<li>
+          <li>Validated the numerical soliton against the exact solution, confirming second-order convergence in \(h\) and \(k\) and identifying that the numerical propagation speed is marginally slower than the analytic prediction.</li>
           <li>Simulated a two-soliton collision, showing the larger/faster soliton overtakes the smaller one and that the interaction is genuinely nonlinear (not a simple superposition of independently-evolved solitons).</li>
           <li>Tracked the breakup of a sine wave into a soliton train under KdV dynamics, estimating the onset time of dispersive effects via a scaling argument (\(T \approx 1/2\pi \approx 0.16\)) and showing smaller \(\delta\) produces more, narrower solitons emerging in order of increasing amplitude and speed.</li>
         </ul>
+        <h5>Selected Figures:</h5>
+        <div class="catam-figrow">
+        <figure class="catam-fig">
+            <figcaption>Numerical solution with initial data \(u(x,0) = 𝑓_1(x) + 𝑓_2(𝑥)\) at various
+            times, illustrating the interaction of two solitons.</figcaption>
+            <img src="{{ '/assets/img/catam_Solitons_superposition.jpg' | relative_url }}" alt="Analytic solution evolution">
+        </figure>
+        <figure class="catam-fig">
+            <figcaption>Numerical solution with initial data (8) and 𝛿 = 0.02 at various times, illustrating wave-steepening and the emergence of solitons.</figcaption>
+            <img src="{{ '/assets/img/catam_Solitons_emergence.jpg' | relative_url }}" alt="Numerical error comparison">
+        </figure>
+        </div>
         <a class="catam-btn" href="{{ '/assets/pdf/catam-4.pdf' | relative_url }}" target="_blank">
           Download full report (PDF)
         </a>
@@ -305,6 +317,7 @@ permalink: /catam/
     flex: 0 1 450px;
     max-width: 450px;
     margin: 0;
+    text-align: center;
   }
 
   .catam-fig figcaption {
@@ -316,8 +329,9 @@ permalink: /catam/
 
   .catam-fig img {
     display: block;
-    width: 100%;
+    width: 450px;
     max-width: 450px;
+    margin: 0 auto;
     border-radius: 0.375rem;
   }
 
