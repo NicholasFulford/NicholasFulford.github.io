@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 6
+title: Characterisation And Response To Regime Changes In Financial Markets
 description: a project with no image
 img:
-importance: 4
-category: fun
+importance: 2
+category: Academic
 ---
 
 Every project has a beautiful feature showcase page.
