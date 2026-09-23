@@ -10,6 +10,21 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
+<style>
+  /* Force two project tiles per row at (almost) any viewport width.
+     The theme's shipped CSS only ships fixed row-cols-1 / row-cols-md-2 / row-cols-md-3
+     utilities (no unconditional two-column class), so we override .col directly here. */
+  .projects .project-grid > .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @media (max-width: 480px) {
+    .projects .project-grid > .col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+</style>
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
@@ -22,14 +37,14 @@ horizontal: false
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
   <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2">
+    <div class="row project-grid row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
     </div>
   </div>
   {% else %}
-  <div class="row row-cols-1 row-cols-sm-2">
+  <div class="row project-grid row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}
       {% include projects.liquid %}
     {% endfor %}
@@ -48,14 +63,14 @@ horizontal: false
 {% if page.horizontal %}
 
   <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2">
+    <div class="row project-grid row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
     </div>
   </div>
   {% else %}
-  <div class="row row-cols-1 row-cols-sm-2">
+  <div class="row project-grid row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}
       {% include projects.liquid %}
     {% endfor %}

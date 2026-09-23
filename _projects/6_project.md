@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Characterisation And Response To Regime Changes In Financial Markets
+title: Characterising And Responding To Regime Changes In Financial Markets
 description: a project with no image
 img:
-importance: 2
+importance: 1
 category: Academic
 ---
 
