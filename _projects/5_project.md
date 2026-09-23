@@ -3,7 +3,7 @@ layout: page
 title: CATAM Projects
 description: My final year Cambridge CATAM projects.
 img: assets/img/catam.png
-importance: 2
+importance: 3
 category: Academic
 permalink: /catam/
 ---

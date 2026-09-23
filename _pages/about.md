@@ -23,4 +23,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-My name is Nic Fulford, an Applied Mathematics MSc student at Imperial College London. Prior to this, I studied Mathematics at Homerton College, University of Cambridge. I am currently working as a part-time research assistant with Dr Devraj Basu at the University of Strathclyde on two concurrent projects applying persistent homology and topological data analysis. I'm interested in the theory of quantum computation 
+My name is Nic Fulford, an Applied Mathematics MSc student at Imperial College London. Prior to this, I studied Mathematics at Homerton College, University of Cambridge. I am currently working as a part-time research assistant with Dr. Devraj Basu at the University of Strathclyde on two concurrent projects applying persistent homology and topological data analysis. 
+
+I'm interested in areas of mathematics wih cutting edge applications to technology, such as the theory of quantum computation and, more recently, developments in AI security. 
